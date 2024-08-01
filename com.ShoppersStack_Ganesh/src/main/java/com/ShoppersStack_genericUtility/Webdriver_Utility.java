@@ -1,6 +1,7 @@
 package com.ShoppersStack_genericUtility;
 
 import java.io.File;
+
 import java.io.IOException;
 
 import org.openqa.selenium.OutputType;
@@ -9,8 +10,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.Select;
 
+
+
 public class Webdriver_Utility {
 	Select sel;
+	Java_Utility util=new Java_Utility();
 	
 	public void selectbyValue(WebElement ele , String value) {
 		sel=new Select(ele);
@@ -50,14 +54,14 @@ public class Webdriver_Utility {
 	public void getWebPageScreenshot() throws IOException {
 		TakesScreenshot ts=(TakesScreenshot) Base_Test.sDriver;
 		File temp = ts.getScreenshotAs(OutputType.FILE);
-		File dest = new File("");
+		File dest = new File(Framework_Constant.screenshotpath+util.localDateTime()+".png");
 		FileHandler.copy(temp, dest);
 		
 	}
 	
 	public void getWebElementScreenshot(WebElement ele) throws IOException {
 		File temp = ele.getScreenshotAs(OutputType.FILE);
-		File dest = new File("");
+		File dest = new File(Framework_Constant.screenshotpath+util.localDateTime()+".png");
 		FileHandler.copy(temp, dest);
 	}
 	
