@@ -21,11 +21,11 @@ public class Verify_User_is_able_to_Delete_Address_Test extends Base_Test {
 		home.getSetting().click();
 		home.getMyProfile().click();
 		
-		test.log(Status.INFO, "My Profile Page Displayed");
+		
 		Myprofile_Page profile=new Myprofile_Page(driver);
 		profile.getMyAddressBtn().click();
 		
-		test.log(Status.INFO, "My Address Page Displayed");
+		
 		MyAddress_Page address=new MyAddress_Page(driver);
 		Thread.sleep(1000);
 		address.getDeleteBtn().click();
