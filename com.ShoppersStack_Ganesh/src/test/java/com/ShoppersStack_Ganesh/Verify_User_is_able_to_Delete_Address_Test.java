@@ -27,12 +27,12 @@ public class Verify_User_is_able_to_Delete_Address_Test extends Base_Test {
 		
 		
 		MyAddress_Page address=new MyAddress_Page(driver);
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		address.getDeleteBtn().click();
 	
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		address.getYesBtn().click();
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 		
 		driver.switchTo().alert().accept();
 		
