@@ -98,9 +98,10 @@ public class Base_Test {
 	}
 	
 	@AfterMethod
-	public void afterMethod(){
+	public void afterMethod() throws InterruptedException{
 		System.out.println("@AfterMethod");
 		
+		Thread.sleep(3000);
 		home.getSetting().click();
 		home.getLogOut().click();
 		
